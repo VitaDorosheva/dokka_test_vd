@@ -5,6 +5,7 @@ from flask import request, make_response
 from flask_jsonpify import jsonify
 
 from apps.services.upload import UploadGeodataService
+
 from app import app, auth
 
 
@@ -39,3 +40,8 @@ def calculate_distances():
 def get_result(result_id):
     message = f'Task {result_id} not found.'
     return make_response(jsonify({"message": message}), 400)
+
+
+if __name__ == '__main__':
+     app.run(debug=True)
+

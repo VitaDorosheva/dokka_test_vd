@@ -3,7 +3,7 @@ from uuid import uuid4
 from apps.services.tasks import generate_geo
 from apps.db.models import Points
 from apps.db.utils import bulk_insert
-from app import db
+from apps.db.models import db
 
 
 class UploadGeodataService():
@@ -20,7 +20,7 @@ class UploadGeodataService():
         for row in self.data:
             points.append({'name': row['Point'],
                            'latitude': row['Latitude'],
-                           'longitude': row['Longotude'],
+                           'longitude': row['Longitude'],
                            'upload_id': self.upload_uuid})
 
         """write to DB"""
