@@ -23,7 +23,7 @@ class UploadGeodataService():
                            'upload_id': self.upload_uuid})
 
         """write to DB"""
-        bulk_insert(db.session, Points, points)
+        bulk_insert(db.session, Points, points, 1)
 
     def populate_geo(self):
         task = generate_geo.delay(self.upload_uuid, self.data)

@@ -20,3 +20,4 @@ def bulk_insert(session: Session, table, values: Iterable[dict], chunk_size: int
             break
         stmt = Insert(table, values_chunk)
         session.execute(stmt)
+    session.commit()
