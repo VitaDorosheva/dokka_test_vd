@@ -3,10 +3,13 @@ import csv
 
 from flask import request, make_response
 from flask_jsonpify import jsonify
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
 from apps.services.upload import UploadGeodataService
 
 from app import app, auth
+
 
 
 @app.route('/api/calculateDistances', methods=['POST'])
