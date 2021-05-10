@@ -5,14 +5,14 @@ import sqlalchemy as sa
 from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base
 
-from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
+# from flask_sqlalchemy import SQLAlchemy
 
-from app import app
+from app import db
 
 Base = declarative_base()
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+# db = SQLAlchemy(app)
+# migrate = Migrate(app, db)
 
 
 class Uploads(db.Model):

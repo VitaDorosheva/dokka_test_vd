@@ -1,9 +1,8 @@
 from uuid import uuid4
 
 from apps.services.tasks import generate_geo
-from apps.db.models import Points
+from apps.db.models import db, Points, Uploads
 from apps.db.utils import bulk_insert
-from apps.db.models import db
 
 
 class UploadGeodataService():
@@ -31,9 +30,12 @@ class UploadGeodataService():
         self.task_id = task.id
 
     def process(self):
-        # upload = Uploads(id=self.upload_uuid,
-        #                  status=,
+        upload = Uploads(id=self.upload_uuid,
+                         status='created')
         #                  task_id=)
+        db.session.add(upload)
+        db.session.commit()
+
         self.create_points()
         self.populate_geo()
 
