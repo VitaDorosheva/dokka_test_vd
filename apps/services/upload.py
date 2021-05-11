@@ -1,7 +1,7 @@
-from uuid import uuid4
+from datetime import datetime
 
 from apps.services.tasks import generate_geo
-from apps.db.models import db, Points, Uploads
+from apps.db.models import db, Point, Upload
 from apps.db.utils import bulk_insert
 
 
@@ -10,9 +10,10 @@ class UploadGeodataService():
     runs task to populate geo data"""
     def __init__(self, data):
         self.data = data
-        self.upload_uuid = uuid4()
+        self.upload_id = None
         self.links = []
         self.task_id = None
+        self.status = ''
 
     def create_points(self):
         points = []
@@ -20,23 +21,27 @@ class UploadGeodataService():
             points.append({'name': row['Point'],
                            'latitude': row['Latitude'],
                            'longitude': row['Longitude'],
-                           'upload_id': self.upload_uuid})
+                           'upload_id': self.upload_id})
 
         """write to DB"""
-        bulk_insert(db.session, Points, points, 1)
+        bulk_insert(db.session, Point, points)
 
     def populate_geo(self):
-        task = generate_geo.delay(self.upload_uuid, self.data)
+        task = generate_geo.delay(self.upload_id)
         self.task_id = task.id
+        upload = Upload.query.filter_by(id=self.upload_id).first()
+        upload.status = Upload.RUNNING
+        upload.task_id = task.id
+        db.session.commit()
+        self.status = upload.status
 
     def process(self):
-        upload = Uploads(id=self.upload_uuid,
-                         status='created')
-        #                  task_id=)
+        upload = Upload(status='created', started=datetime.utcnow())
         db.session.add(upload)
         db.session.commit()
+        self.upload_id = upload.id
 
         self.create_points()
         self.populate_geo()
 
-        return self.upload_uuid
+        return self.task_id

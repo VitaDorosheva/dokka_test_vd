@@ -4,12 +4,12 @@ from flask_httpauth import HTTPBasicAuth
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
-from settings import SQLALCHEMY_DATABASE_URI
-
+from settings import SQLALCHEMY_DATABASE_URI, SQLALCHEMY_TRACK_MODIFICATIONS
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = SQLALCHEMY_TRACK_MODIFICATIONS
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 

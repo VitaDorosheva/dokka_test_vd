@@ -1,0 +1,1885 @@
+[2021-05-11 22:14:22,697: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 22:14:22,706: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 22:14:23,724: INFO/MainProcess] mingle: all alone
+[2021-05-11 22:14:23,733: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 22:14:24,018: INFO/MainProcess] Received task: generate_geo[ec5485fa-c241-4546-9ed2-7f76c638d827]  
+[2021-05-11 22:14:24,019: INFO/MainProcess] Received task: generate_geo[6d43a230-f708-443c-8dcc-0837a6b62bf9]  
+[2021-05-11 22:14:24,020: INFO/MainProcess] Received task: generate_geo[2f45dff3-2c7e-4ae8-9657-46c664fa6043]  
+[2021-05-11 22:14:24,023: INFO/MainProcess] Received task: generate_geo[916de707-d74b-40f8-a121-5eeea1f80034]  
+[2021-05-11 22:14:24,024: INFO/MainProcess] Received task: generate_geo[8d15bf75-5bbc-448d-99cb-15f45d65d8bc]  
+[2021-05-11 22:14:24,026: INFO/MainProcess] Received task: generate_geo[2e8af7a0-019c-4807-9f13-3d4c754fcd4e]  
+[2021-05-11 22:14:24,030: INFO/MainProcess] Received task: generate_geo[d3b322c7-54fd-48b4-9da9-f179ea7f4ff4]  
+[2021-05-11 22:14:24,033: INFO/MainProcess] Received task: generate_geo[76eb5d06-7620-4039-985c-f9880baebcb5]  
+[2021-05-11 22:14:24,041: INFO/MainProcess] Received task: generate_geo[b1017112-9c19-460c-bb76-862ec704c6e0]  
+[2021-05-11 22:14:24,044: INFO/MainProcess] Received task: generate_geo[96d65378-e3ea-49d6-b476-45f30b144c41]  
+[2021-05-11 22:14:24,046: INFO/MainProcess] Received task: generate_geo[2156d3c7-fc93-4a41-83d6-9ff8379232db]  
+[2021-05-11 22:14:24,047: INFO/MainProcess] Received task: generate_geo[570d6677-12d0-42b9-9607-5ab3996ec63e]  
+[2021-05-11 22:14:24,049: INFO/MainProcess] Received task: generate_geo[93a92ccf-396a-4d84-9afe-e2bb2b2cd479]  
+[2021-05-11 22:14:24,051: INFO/MainProcess] Received task: generate_geo[d6ed233f-7533-485d-9427-95403a597abe]  
+[2021-05-11 22:14:24,052: INFO/MainProcess] Received task: generate_geo[d65e8439-7d1a-4e92-af2a-b81db20a8fca]  
+[2021-05-11 22:14:24,054: INFO/MainProcess] Received task: generate_geo[5b862163-98d5-46b2-af0a-df1bd01b61de]  
+[2021-05-11 22:14:24,055: INFO/MainProcess] Received task: generate_geo[f5844872-363f-4ac5-a1d7-843ecbcce702]  
+[2021-05-11 22:14:24,056: INFO/MainProcess] Received task: generate_geo[b8a6e0d9-f086-4b24-aa6f-d72313eab9a2]  
+[2021-05-11 22:14:24,058: INFO/MainProcess] Received task: generate_geo[39f1ea87-d375-4bf5-9d86-9d9d9f7ecb83]  
+[2021-05-11 22:14:24,059: INFO/MainProcess] Received task: generate_geo[6e6ce3b2-7fc2-451c-823f-75df03c9e929]  
+[2021-05-11 22:14:24,061: INFO/MainProcess] Received task: generate_geo[820a8c93-58b7-47fe-87ba-56e668b4b300]  
+[2021-05-11 22:14:24,062: INFO/MainProcess] Received task: generate_geo[1867617f-9733-4897-a66b-048c463a2653]  
+[2021-05-11 22:14:24,063: ERROR/ForkPoolWorker-7] Task generate_geo[ec5485fa-c241-4546-9ed2-7f76c638d827] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "f9d13ddc-b25c-4002-a8a7-cdce84b6972d"\nLINE 3: WHERE point.upload_id = \'f9d13ddc-b25c-4002-a8a7-cdce84b6972...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "f9d13ddc-b25c-4002-a8a7-cdce84b6972d"
+LINE 3: WHERE point.upload_id = 'f9d13ddc-b25c-4002-a8a7-cdce84b6972...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "f9d13ddc-b25c-4002-a8a7-cdce84b6972d"
+LINE 3: WHERE point.upload_id = 'f9d13ddc-b25c-4002-a8a7-cdce84b6972...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 'f9d13ddc-b25c-4002-a8a7-cdce84b6972d'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,064: INFO/MainProcess] Received task: generate_geo[b25e4f9c-011d-4361-9195-dea47ed9ce04]  
+[2021-05-11 22:14:24,065: INFO/MainProcess] Received task: generate_geo[98afb499-5780-43c2-839f-37cca6d9c090]  
+[2021-05-11 22:14:24,066: ERROR/ForkPoolWorker-1] Task generate_geo[2f45dff3-2c7e-4ae8-9657-46c664fa6043] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "9ed1f960-5c4a-4533-9c3d-391f72f47e4d"\nLINE 3: WHERE point.upload_id = \'9ed1f960-5c4a-4533-9c3d-391f72f47e4...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "9ed1f960-5c4a-4533-9c3d-391f72f47e4d"
+LINE 3: WHERE point.upload_id = '9ed1f960-5c4a-4533-9c3d-391f72f47e4...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "9ed1f960-5c4a-4533-9c3d-391f72f47e4d"
+LINE 3: WHERE point.upload_id = '9ed1f960-5c4a-4533-9c3d-391f72f47e4...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '9ed1f960-5c4a-4533-9c3d-391f72f47e4d'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,067: ERROR/ForkPoolWorker-2] Task generate_geo[916de707-d74b-40f8-a121-5eeea1f80034] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "8c8a4d67-6935-4863-a109-8e7630e1bbe8"\nLINE 3: WHERE point.upload_id = \'8c8a4d67-6935-4863-a109-8e7630e1bbe...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "8c8a4d67-6935-4863-a109-8e7630e1bbe8"
+LINE 3: WHERE point.upload_id = '8c8a4d67-6935-4863-a109-8e7630e1bbe...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "8c8a4d67-6935-4863-a109-8e7630e1bbe8"
+LINE 3: WHERE point.upload_id = '8c8a4d67-6935-4863-a109-8e7630e1bbe...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '8c8a4d67-6935-4863-a109-8e7630e1bbe8'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,069: ERROR/ForkPoolWorker-3] Task generate_geo[8d15bf75-5bbc-448d-99cb-15f45d65d8bc] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "1a6538c8-e96b-4e47-a823-b69c31295dd2"\nLINE 3: WHERE point.upload_id = \'1a6538c8-e96b-4e47-a823-b69c31295dd...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "1a6538c8-e96b-4e47-a823-b69c31295dd2"
+LINE 3: WHERE point.upload_id = '1a6538c8-e96b-4e47-a823-b69c31295dd...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "1a6538c8-e96b-4e47-a823-b69c31295dd2"
+LINE 3: WHERE point.upload_id = '1a6538c8-e96b-4e47-a823-b69c31295dd...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '1a6538c8-e96b-4e47-a823-b69c31295dd2'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,069: ERROR/ForkPoolWorker-7] Task generate_geo[b1017112-9c19-460c-bb76-862ec704c6e0] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 'c3ae5d3a-866f-44a9-986c-3d56f29e52fc'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,069: ERROR/ForkPoolWorker-4] Task generate_geo[2e8af7a0-019c-4807-9f13-3d4c754fcd4e] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "9c364af8-e837-4357-8cda-865bed321239"\nLINE 3: WHERE point.upload_id = \'9c364af8-e837-4357-8cda-865bed32123...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "9c364af8-e837-4357-8cda-865bed321239"
+LINE 3: WHERE point.upload_id = '9c364af8-e837-4357-8cda-865bed32123...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "9c364af8-e837-4357-8cda-865bed321239"
+LINE 3: WHERE point.upload_id = '9c364af8-e837-4357-8cda-865bed32123...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '9c364af8-e837-4357-8cda-865bed321239'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,071: ERROR/ForkPoolWorker-1] Task generate_geo[96d65378-e3ea-49d6-b476-45f30b144c41] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '0c38eb60-e3c5-48e6-83ea-6327318ce2bd'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,074: ERROR/ForkPoolWorker-3] Task generate_geo[570d6677-12d0-42b9-9607-5ab3996ec63e] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '1d24cf9d-3c16-46a1-8f0f-6ef5aaabd5b8'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,075: ERROR/ForkPoolWorker-4] Task generate_geo[93a92ccf-396a-4d84-9afe-e2bb2b2cd479] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 'beef3e2c-5a8e-499c-a029-ab7e4cd2b44b'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,075: ERROR/ForkPoolWorker-2] Task generate_geo[2156d3c7-fc93-4a41-83d6-9ff8379232db] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '99186ca4-27e8-4f48-aa57-2709ee675704'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,075: ERROR/ForkPoolWorker-6] Task generate_geo[76eb5d06-7620-4039-985c-f9880baebcb5] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "0d51bda3-375f-479c-a178-c83cfddd9ca5"\nLINE 3: WHERE point.upload_id = \'0d51bda3-375f-479c-a178-c83cfddd9ca...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "0d51bda3-375f-479c-a178-c83cfddd9ca5"
+LINE 3: WHERE point.upload_id = '0d51bda3-375f-479c-a178-c83cfddd9ca...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "0d51bda3-375f-479c-a178-c83cfddd9ca5"
+LINE 3: WHERE point.upload_id = '0d51bda3-375f-479c-a178-c83cfddd9ca...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '0d51bda3-375f-479c-a178-c83cfddd9ca5'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,076: ERROR/ForkPoolWorker-8] Task generate_geo[6d43a230-f708-443c-8dcc-0837a6b62bf9] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "f2c235f7-d19c-4c71-b1f7-64b7f82ec13b"\nLINE 3: WHERE point.upload_id = \'f2c235f7-d19c-4c71-b1f7-64b7f82ec13...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "f2c235f7-d19c-4c71-b1f7-64b7f82ec13b"
+LINE 3: WHERE point.upload_id = 'f2c235f7-d19c-4c71-b1f7-64b7f82ec13...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "f2c235f7-d19c-4c71-b1f7-64b7f82ec13b"
+LINE 3: WHERE point.upload_id = 'f2c235f7-d19c-4c71-b1f7-64b7f82ec13...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 'f2c235f7-d19c-4c71-b1f7-64b7f82ec13b'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,077: ERROR/ForkPoolWorker-7] Task generate_geo[d6ed233f-7533-485d-9427-95403a597abe] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '5130aa07-f196-4ea4-a91d-f475f3351766'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,078: ERROR/ForkPoolWorker-1] Task generate_geo[d65e8439-7d1a-4e92-af2a-b81db20a8fca] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '549f2f59-65aa-44b5-b285-ca85f33cd0ca'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,080: ERROR/ForkPoolWorker-2] Task generate_geo[5b862163-98d5-46b2-af0a-df1bd01b61de] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 'bebe9bad-920f-4b41-8272-1b447ec0594c'}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,080: ERROR/ForkPoolWorker-3] Task generate_geo[f5844872-363f-4ac5-a1d7-843ecbcce702] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 5}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,080: ERROR/ForkPoolWorker-4] Task generate_geo[b8a6e0d9-f086-4b24-aa6f-d72313eab9a2] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 5}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,080: ERROR/ForkPoolWorker-6] Task generate_geo[39f1ea87-d375-4bf5-9d86-9d9d9f7ecb83] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 6}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,084: ERROR/ForkPoolWorker-7] Task generate_geo[6e6ce3b2-7fc2-451c-823f-75df03c9e929] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 6}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,084: ERROR/ForkPoolWorker-8] Task generate_geo[820a8c93-58b7-47fe-87ba-56e668b4b300] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 7}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,084: ERROR/ForkPoolWorker-1] Task generate_geo[1867617f-9733-4897-a66b-048c463a2653] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 7}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,085: ERROR/ForkPoolWorker-5] Task generate_geo[d3b322c7-54fd-48b4-9da9-f179ea7f4ff4] raised unexpected: DataError('(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "27183af0-c77b-46de-93c7-1c0345df6e1a"\nLINE 3: WHERE point.upload_id = \'27183af0-c77b-46de-93c7-1c0345df6e1...\n                                ^\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "27183af0-c77b-46de-93c7-1c0345df6e1a"
+LINE 3: WHERE point.upload_id = '27183af0-c77b-46de-93c7-1c0345df6e1...
+                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "27183af0-c77b-46de-93c7-1c0345df6e1a"
+LINE 3: WHERE point.upload_id = '27183af0-c77b-46de-93c7-1c0345df6e1...
+                                ^
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': '27183af0-c77b-46de-93c7-1c0345df6e1a'}]
+(Background on this error at: http://sqlalche.me/e/14/9h9h)
+[2021-05-11 22:14:24,086: ERROR/ForkPoolWorker-2] Task generate_geo[b25e4f9c-011d-4361-9195-dea47ed9ce04] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 8}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:24,086: ERROR/ForkPoolWorker-3] Task generate_geo[98afb499-5780-43c2-839f-37cca6d9c090] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 8}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:52,156: INFO/MainProcess] Received task: generate_geo[0f233553-b561-4e29-9e74-58d84292a26a]  
+[2021-05-11 22:14:52,158: ERROR/ForkPoolWorker-7] Task generate_geo[0f233553-b561-4e29-9e74-58d84292a26a] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 9}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:14:52,159: INFO/MainProcess] Received task: generate_geo[9ea00b77-122a-4ff3-a5d0-48365e124134]  
+[2021-05-11 22:14:52,162: ERROR/ForkPoolWorker-7] Task generate_geo[9ea00b77-122a-4ff3-a5d0-48365e124134] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 9}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:15:43,875: INFO/MainProcess] Received task: generate_geo[3c22f69e-b67e-4ee1-a31b-f886af5326b1]  
+[2021-05-11 22:15:43,878: ERROR/ForkPoolWorker-7] Task generate_geo[3c22f69e-b67e-4ee1-a31b-f886af5326b1] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 10}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:15:43,880: INFO/MainProcess] Received task: generate_geo[27a3a52d-82f8-4103-b06d-c39617e3f2be]  
+[2021-05-11 22:15:43,884: ERROR/ForkPoolWorker-7] Task generate_geo[27a3a52d-82f8-4103-b06d-c39617e3f2be] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 10}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:15:44,949: INFO/MainProcess] Received task: generate_geo[362ea1b4-40f0-4952-b17e-f78c1cf417c9]  
+[2021-05-11 22:15:44,952: ERROR/ForkPoolWorker-7] Task generate_geo[362ea1b4-40f0-4952-b17e-f78c1cf417c9] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 11}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:15:44,954: INFO/MainProcess] Received task: generate_geo[d36cd470-69f6-40fb-bf65-33c961418d86]  
+[2021-05-11 22:15:44,956: ERROR/ForkPoolWorker-7] Task generate_geo[d36cd470-69f6-40fb-bf65-33c961418d86] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 11}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:18:06,783: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 22:18:14,208: INFO/MainProcess] Received task: generate_geo[11b742f6-888b-4fc0-8120-990e17c9b86c]  
+[2021-05-11 22:18:14,213: ERROR/ForkPoolWorker-7] Task generate_geo[11b742f6-888b-4fc0-8120-990e17c9b86c] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 12}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:18:14,214: INFO/MainProcess] Received task: generate_geo[9779ec56-a5f4-46cd-a0ea-09c1be0f6e36]  
+[2021-05-11 22:18:14,219: ERROR/ForkPoolWorker-7] Task generate_geo[9779ec56-a5f4-46cd-a0ea-09c1be0f6e36] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 12}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:20:52,542: INFO/MainProcess] Received task: generate_geo[339b27af-6f7a-4f27-85b6-192b6d5ce166]  
+[2021-05-11 22:20:52,546: ERROR/ForkPoolWorker-7] Task generate_geo[339b27af-6f7a-4f27-85b6-192b6d5ce166] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 13}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:20:52,550: INFO/MainProcess] Received task: generate_geo[289f8ed7-1c56-48b5-baae-4833d27530cf]  
+[2021-05-11 22:20:52,554: ERROR/ForkPoolWorker-7] Task generate_geo[289f8ed7-1c56-48b5-baae-4833d27530cf] raised unexpected: InternalError('(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 18, in generate_geo
+    for p in qs:
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2827, in __iter__
+    return self._iter().__iter__()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT point.id AS point_id, point.upload_id AS point_upload_id, point.name AS point_name, point.latitude AS point_latitude, point.longitude AS point_longitude, point.address AS point_address 
+FROM point 
+WHERE point.upload_id = %(upload_id_1)s]
+[parameters: {'upload_id_1': 13}]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2021-05-11 22:21:31,179: INFO/MainProcess] Received task: generate_geo[dc84a388-7eda-40dd-bf66-11e559b6aa5e]  
+[2021-05-11 22:21:31,182: ERROR/ForkPoolWorker-7] Task generate_geo[dc84a388-7eda-40dd-bf66-11e559b6aa5e] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:22:09,727: INFO/MainProcess] Received task: generate_geo[24d6f655-a214-4bba-b02c-d55605ac20ca]  
+[2021-05-11 22:22:09,730: ERROR/ForkPoolWorker-7] Task generate_geo[24d6f655-a214-4bba-b02c-d55605ac20ca] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:22:10,919: INFO/MainProcess] Received task: generate_geo[5247002f-0349-4a76-bb0f-6783670270a3]  
+[2021-05-11 22:22:10,921: ERROR/ForkPoolWorker-7] Task generate_geo[5247002f-0349-4a76-bb0f-6783670270a3] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:23:48,747: INFO/MainProcess] Received task: generate_geo[f870886f-aaa7-4905-9239-c6cc7acefe56]  
+[2021-05-11 22:23:48,749: ERROR/ForkPoolWorker-7] Task generate_geo[f870886f-aaa7-4905-9239-c6cc7acefe56] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:24:10,183: INFO/MainProcess] Received task: generate_geo[8b90f15b-78be-464f-984d-361e16a696c1]  
+[2021-05-11 22:24:10,185: ERROR/ForkPoolWorker-7] Task generate_geo[8b90f15b-78be-464f-984d-361e16a696c1] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:24:11,077: INFO/MainProcess] Received task: generate_geo[24a4935a-ed0c-43bf-a3bb-a6e28aa89649]  
+[2021-05-11 22:24:11,081: ERROR/ForkPoolWorker-7] Task generate_geo[24a4935a-ed0c-43bf-a3bb-a6e28aa89649] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:25:30,127: INFO/MainProcess] Received task: generate_geo[fd05e810-0cf3-4cfb-9ae7-b89ca3688d5c]  
+[2021-05-11 22:25:30,129: ERROR/ForkPoolWorker-7] Task generate_geo[fd05e810-0cf3-4cfb-9ae7-b89ca3688d5c] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:25:39,729: INFO/MainProcess] Received task: generate_geo[87cdd6a1-6523-432c-8517-42f2d3cb2eeb]  
+[2021-05-11 22:25:39,732: ERROR/ForkPoolWorker-7] Task generate_geo[87cdd6a1-6523-432c-8517-42f2d3cb2eeb] raised unexpected: TypeError("generate_geo() missing 1 required positional argument: 'data'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: generate_geo() missing 1 required positional argument: 'data'
+[2021-05-11 22:26:35,032: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 22:26:35,039: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 22:26:36,057: INFO/MainProcess] mingle: all alone
+[2021-05-11 22:26:36,071: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 22:26:39,558: INFO/MainProcess] Received task: generate_geo[10b4fa65-d753-40e0-b7fd-fde3256b0a49]  
+[2021-05-11 22:26:39,562: INFO/ForkPoolWorker-7] Task generate_geo[10b4fa65-d753-40e0-b7fd-fde3256b0a49] succeeded in 0.00302356798783876s: True
+[2021-05-11 22:28:10,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 22:28:16,493: INFO/MainProcess] Received task: generate_geo[143f27a5-cf93-4b75-8e62-1f2b7caf0d77]  
+[2021-05-11 22:28:16,496: INFO/ForkPoolWorker-7] Task generate_geo[143f27a5-cf93-4b75-8e62-1f2b7caf0d77] succeeded in 0.0011516190133988857s: True
+[2021-05-11 22:28:39,103: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 22:28:39,128: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 22:28:40,146: INFO/MainProcess] mingle: all alone
+[2021-05-11 22:28:40,169: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 22:28:40,407: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 22:28:42,043: INFO/MainProcess] Received task: generate_geo[ad19d9f8-6e8b-48e9-a5ec-39164d5d1b43]  
+[2021-05-11 22:28:44,311: INFO/ForkPoolWorker-7] Task generate_geo[ad19d9f8-6e8b-48e9-a5ec-39164d5d1b43] succeeded in 2.2665223559888545s: True
+[2021-05-11 22:30:01,505: INFO/MainProcess] Received task: generate_geo[05564cc1-dc59-49e7-bfb2-1fb9c67a2b15]  
+[2021-05-11 22:30:02,495: INFO/ForkPoolWorker-7] Task generate_geo[05564cc1-dc59-49e7-bfb2-1fb9c67a2b15] succeeded in 0.9881102910003392s: True
+[2021-05-11 22:30:22,056: INFO/MainProcess] Received task: generate_geo[499dc5b3-2940-4a82-8de0-1f26a91b9d62]  
+[2021-05-11 22:30:22,774: INFO/ForkPoolWorker-7] Task generate_geo[499dc5b3-2940-4a82-8de0-1f26a91b9d62] succeeded in 0.716629993999959s: True
+[2021-05-11 22:30:39,085: INFO/MainProcess] Received task: generate_geo[8fe8bdc5-674c-4a5e-bec4-1c99db5c9d5d]  
+[2021-05-11 22:30:39,754: INFO/ForkPoolWorker-7] Task generate_geo[8fe8bdc5-674c-4a5e-bec4-1c99db5c9d5d] succeeded in 0.667318242994952s: True
+[2021-05-11 22:32:55,418: INFO/MainProcess] Received task: generate_geo[bd7c751b-093f-4119-bd0f-24f5086bcf4c]  
+[2021-05-11 22:32:56,371: INFO/ForkPoolWorker-7] Task generate_geo[bd7c751b-093f-4119-bd0f-24f5086bcf4c] succeeded in 0.95111288499902s: True
+[2021-05-11 22:33:31,103: INFO/MainProcess] Received task: generate_geo[f88f838a-025c-44e5-9312-643c1bf12963]  
+[2021-05-11 22:33:31,812: INFO/ForkPoolWorker-7] Task generate_geo[f88f838a-025c-44e5-9312-643c1bf12963] succeeded in 0.7078210379986558s: True
+[2021-05-11 22:34:25,086: INFO/MainProcess] Received task: generate_geo[ab38d863-7635-43ae-9794-4074539fd2db]  
+[2021-05-11 22:34:26,083: INFO/ForkPoolWorker-7] Task generate_geo[ab38d863-7635-43ae-9794-4074539fd2db] succeeded in 0.9960322819970315s: True
+[2021-05-11 22:35:23,850: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 22:35:23,857: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 22:35:24,875: INFO/MainProcess] mingle: all alone
+[2021-05-11 22:35:24,901: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 22:35:25,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 22:35:26,072: INFO/MainProcess] Received task: generate_geo[58dbad64-54e9-4239-b057-dd6539602a4f]  
+[2021-05-11 22:35:26,930: INFO/ForkPoolWorker-7] Task generate_geo[58dbad64-54e9-4239-b057-dd6539602a4f] succeeded in 0.8556580750009743s: True
+[2021-05-11 23:47:14,452: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 23:47:14,460: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 23:47:15,478: INFO/MainProcess] mingle: all alone
+[2021-05-11 23:47:15,504: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 23:47:16,566: INFO/MainProcess] Received task: generate_geo[33632de3-75eb-409a-9817-6a133c8c2f1e]  
+[2021-05-11 23:47:17,633: INFO/ForkPoolWorker-7] Task generate_geo[33632de3-75eb-409a-9817-6a133c8c2f1e] succeeded in 1.064830981005798s: True
+[2021-05-11 23:47:18,212: INFO/MainProcess] Received task: generate_geo[32207141-4684-452e-8cbb-d57869e447a7]  
+[2021-05-11 23:47:18,915: INFO/ForkPoolWorker-7] Task generate_geo[32207141-4684-452e-8cbb-d57869e447a7] succeeded in 0.702515974000562s: True
+[2021-05-11 23:47:20,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 23:56:02,289: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 23:56:02,297: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 23:56:03,313: INFO/MainProcess] mingle: all alone
+[2021-05-11 23:56:03,330: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 23:56:05,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-11 23:56:06,227: INFO/MainProcess] Received task: generate_geo[decdf0c9-ea37-457f-8c48-2ccd0f8879a3]  
+[2021-05-11 23:56:07,349: INFO/ForkPoolWorker-7] Task generate_geo[decdf0c9-ea37-457f-8c48-2ccd0f8879a3] succeeded in 1.120796193004935s: True
+[2021-05-11 23:57:02,166: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-11 23:57:02,174: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-11 23:57:03,192: INFO/MainProcess] mingle: all alone
+[2021-05-11 23:57:03,219: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-11 23:57:05,081: INFO/MainProcess] Received task: generate_geo[842fbff7-d935-4f36-8318-5a559a4a491a]  
+[2021-05-11 23:57:05,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-12 00:00:25,941: INFO/ForkPoolWorker-7] Task generate_geo[842fbff7-d935-4f36-8318-5a559a4a491a] succeeded in 200.85868259400013s: True
+[2021-05-12 00:06:28,836: INFO/MainProcess] Received task: generate_geo[249733f0-6e07-4dad-a647-a7084d586986]  
+[2021-05-12 00:09:49,939: INFO/ForkPoolWorker-7] Task generate_geo[249733f0-6e07-4dad-a647-a7084d586986] succeeded in 201.10169424800551s: True
+[2021-05-12 00:55:48,383: INFO/MainProcess] Received task: generate_geo[4605d74b-cefe-4421-b293-6884adbc5d3f]  
+[2021-05-12 00:57:24,061: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 00:57:24,069: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 00:57:25,087: INFO/MainProcess] mingle: all alone
+[2021-05-12 00:57:25,112: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-12 00:57:25,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-12 00:59:37,335: INFO/MainProcess] Received task: generate_geo[29d2b1ad-4570-430c-917c-9673c3e6254d]  
+[2021-05-12 00:59:38,529: INFO/ForkPoolWorker-7] Task generate_geo[29d2b1ad-4570-430c-917c-9673c3e6254d] succeeded in 1.191413697990356s: True
+[2021-05-12 01:01:51,644: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 01:01:51,652: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 01:01:52,670: INFO/MainProcess] mingle: all alone
+[2021-05-12 01:01:52,694: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-12 01:01:55,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-12 01:01:57,319: INFO/MainProcess] Received task: generate_geo[036d6380-8bf1-47aa-a55a-2b3efeb61a4d]  
+[2021-05-12 01:03:38,549: INFO/ForkPoolWorker-7] Task generate_geo[036d6380-8bf1-47aa-a55a-2b3efeb61a4d] succeeded in 101.227998346003s: True
+[2021-05-12 01:16:28,379: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 01:16:28,388: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 01:16:29,406: INFO/MainProcess] mingle: all alone
+[2021-05-12 01:16:29,429: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-12 01:16:30,404: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-12 01:17:27,796: INFO/MainProcess] Received task: generate_geo[f822a9e6-c3fc-439b-8d8f-c5629e57ba22]  
+[2021-05-12 01:19:09,006: ERROR/ForkPoolWorker-7] Task generate_geo[f822a9e6-c3fc-439b-8d8f-c5629e57ba22] raised unexpected: ProgrammingError("(psycopg2.ProgrammingError) can't adapt type 'builtin_function_or_method'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 44, in generate_geo
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3262, in flush
+    self._flush(objects)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3402, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3362, in _flush
+    flush_context.execute()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 453, in execute
+    rec.execute(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 627, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 234, in save_obj
+    _emit_update_statements(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 998, in _emit_update_statements
+    c = connection._execute_20(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'builtin_function_or_method'
+[SQL: UPDATE upload SET status=%(status)s, finished=%(finished)s WHERE upload.id = %(upload_id)s]
+[parameters: {'status': 'done', 'finished': <built-in method utcnow of type object at 0x92ab80>, 'upload_id': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2021-05-12 01:20:53,850: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 01:20:53,857: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 01:20:54,876: INFO/MainProcess] mingle: all alone
+[2021-05-12 01:20:54,901: INFO/MainProcess] celery@vita-Precision-7510 ready.
+[2021-05-12 01:20:55,405: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-12 01:21:07,916: INFO/MainProcess] Received task: generate_geo[9f9d5993-07ca-4c7c-a0a3-68637595555f]  
+[2021-05-12 01:21:09,041: INFO/ForkPoolWorker-7] Task generate_geo[9f9d5993-07ca-4c7c-a0a3-68637595555f] succeeded in 1.1231724209937965s: True
+[2021-05-12 01:21:09,863: INFO/MainProcess] Received task: generate_geo[6cf52f70-719b-4d1b-bbc9-9c51342f4afb]  
+[2021-05-12 01:21:10,613: INFO/ForkPoolWorker-7] Task generate_geo[6cf52f70-719b-4d1b-bbc9-9c51342f4afb] succeeded in 0.7488034200068796s: True
