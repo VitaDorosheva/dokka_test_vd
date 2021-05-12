@@ -36,7 +36,7 @@ class UploadGeodataService():
         self.status = upload.status
 
     def process(self):
-        upload = Upload(status='created', started=datetime.utcnow())
+        upload = Upload(status='created')
         db.session.add(upload)
         db.session.commit()
         self.upload_id = upload.id

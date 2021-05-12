@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import sqlalchemy as sa
 
 from sqlalchemy_utils import UUIDType
@@ -17,7 +19,7 @@ class Upload(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     status = db.Column(db.String())
     task_id = db.Column(UUIDType, index=True)
-    started = db.Column(sa.DateTime)
+    started = db.Column(sa.DateTime, default=datetime.utcnow)
     finished = db.Column(sa.DateTime)
 
 

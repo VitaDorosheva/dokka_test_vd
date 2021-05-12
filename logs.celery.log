@@ -1883,3 +1883,412 @@ sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'b
 [2021-05-12 01:21:09,041: INFO/ForkPoolWorker-7] Task generate_geo[9f9d5993-07ca-4c7c-a0a3-68637595555f] succeeded in 1.1231724209937965s: True
 [2021-05-12 01:21:09,863: INFO/MainProcess] Received task: generate_geo[6cf52f70-719b-4d1b-bbc9-9c51342f4afb]  
 [2021-05-12 01:21:10,613: INFO/ForkPoolWorker-7] Task generate_geo[6cf52f70-719b-4d1b-bbc9-9c51342f4afb] succeeded in 0.7488034200068796s: True
+[2021-05-12 10:09:32,996: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,000: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:32,996: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:32,995: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:32,998: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:32,997: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,004: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,007: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:32,997: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,011: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,015: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 308, in create_loop
+    events = poll(poll_timeout)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/kombu/utils/eventio.py", line 84, in poll
+    return self._epoll.poll(timeout if timeout is not None else -1)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 276, in _handle_request
+    safe_say('worker: {0} shutdown (MainProcess)'.format(how))
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/apps/worker.py", line 86, in safe_say
+    print('\n{0}'.format(msg), file=sys.__stderr__)
+OSError: [Errno 5] Input/output error
+[2021-05-12 10:09:33,039: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,053: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,060: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,062: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,062: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,063: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,066: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,067: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,069: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,070: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,071: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,072: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,074: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,075: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,077: INFO/MainProcess] Connected to redis://localhost:6379//
+[2021-05-12 10:09:33,082: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,084: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,084: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,087: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,087: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,089: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:33,089: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-12 10:09:34,071: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,079: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:190982 exited with 'exitcode 15'
+[2021-05-12 10:09:34,082: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,082: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,084: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,087: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,089: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:190981 exited with 'exitcode 15'
+[2021-05-12 10:09:34,090: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:168076 exited with 'exitcode 15'
+[2021-05-12 10:09:34,090: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,091: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:178709 exited with 'exitcode 15'
+[2021-05-12 10:09:34,091: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,092: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:187662 exited with 'exitcode 15'
+[2021-05-12 10:09:34,092: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,093: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,094: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,095: INFO/MainProcess] mingle: all alone
+[2021-05-12 10:09:34,095: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:190402 exited with 'exitcode 15'
+[2021-05-12 10:09:34,100: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:190980 exited with 'exitcode 15'
+[2021-05-12 10:09:34,100: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:178581 exited with 'exitcode 15'
+[2021-05-12 10:09:34,100: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:177472 exited with 'exitcode 15'
+[2021-05-12 10:09:34,100: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:168075 exited with 'exitcode 15'
+[2021-05-12 10:09:34,101: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:178708 exited with 'exitcode 15'
+[2021-05-12 10:09:34,101: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:166762 exited with 'exitcode 15'
+[2021-05-12 10:09:34,101: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:164486 exited with 'exitcode 15'
+[2021-05-12 10:09:34,102: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:187661 exited with 'exitcode 15'
+[2021-05-12 10:09:34,102: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:166374 exited with 'exitcode 15'
+[2021-05-12 10:09:34,103: ERROR/MainProcess] Process 'ForkPoolWorker-8' pid:188471 exited with 'exitcode 15'
+[2021-05-12 10:09:34,106: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:190401 exited with 'exitcode 15'
+[2021-05-12 10:09:34,110: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:190979 exited with 'exitcode 15'
+[2021-05-12 10:09:34,110: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:178580 exited with 'exitcode 15'
+[2021-05-12 10:09:34,110: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:177471 exited with 'exitcode 15'
+[2021-05-12 10:09:34,110: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:168074 exited with 'exitcode 15'
+[2021-05-12 10:09:34,111: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:178707 exited with 'exitcode 15'
+[2021-05-12 10:09:34,112: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:164485 exited with 'exitcode 15'
+[2021-05-12 10:09:34,112: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:166761 exited with 'exitcode 15'
+[2021-05-12 10:09:34,112: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:187660 exited with 'exitcode 15'
+[2021-05-12 10:09:34,112: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:166373 exited with 'exitcode 15'
+[2021-05-12 10:09:34,114: ERROR/MainProcess] Process 'ForkPoolWorker-7' pid:188470 exited with 'exitcode 15'
+[2021-05-12 10:09:34,116: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:190400 exited with 'exitcode 15'
+[2021-05-12 10:09:34,120: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:190978 exited with 'exitcode 15'
+[2021-05-12 10:09:34,120: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:178579 exited with 'exitcode 15'
+[2021-05-12 10:09:34,120: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:177470 exited with 'exitcode 15'
+[2021-05-12 10:09:34,121: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:168073 exited with 'exitcode 15'
+[2021-05-12 10:09:34,122: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:178706 exited with 'exitcode 15'
+[2021-05-12 10:09:34,122: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:166760 exited with 'exitcode 15'
+[2021-05-12 10:09:34,122: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:164484 exited with 'exitcode 15'
+[2021-05-12 10:09:34,122: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:187659 exited with 'exitcode 15'
+[2021-05-12 10:09:34,122: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:166372 exited with 'exitcode 15'
+[2021-05-12 10:09:34,124: ERROR/MainProcess] Process 'ForkPoolWorker-6' pid:188469 exited with 'exitcode 15'
+[2021-05-12 10:09:34,127: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:190399 exited with 'exitcode 15'
+[2021-05-12 10:09:34,131: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:190977 exited with 'exitcode 15'
+[2021-05-12 10:09:34,131: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:178578 exited with 'exitcode 15'
+[2021-05-12 10:09:34,131: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:177469 exited with 'exitcode 15'
+[2021-05-12 10:09:34,131: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:168072 exited with 'exitcode 15'
+[2021-05-12 10:09:34,132: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:178705 exited with 'exitcode 15'
+[2021-05-12 10:09:34,133: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:166759 exited with 'exitcode 15'
+[2021-05-12 10:09:34,133: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:164483 exited with 'exitcode 15'
+[2021-05-12 10:09:34,133: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:187658 exited with 'exitcode 15'
+[2021-05-12 10:09:34,133: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:166371 exited with 'exitcode 15'
+[2021-05-12 10:09:34,135: ERROR/MainProcess] Process 'ForkPoolWorker-5' pid:188468 exited with 'exitcode 15'
+[2021-05-12 10:09:34,137: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:190398 exited with 'exitcode 15'
+[2021-05-12 10:09:34,141: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:190976 exited with 'exitcode 15'
+[2021-05-12 10:09:34,141: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:168071 exited with 'exitcode 15'
+[2021-05-12 10:09:34,141: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:178577 exited with 'exitcode 15'
+[2021-05-12 10:09:34,141: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:177468 exited with 'exitcode 15'
+[2021-05-12 10:09:34,142: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:178704 exited with 'exitcode 15'
+[2021-05-12 10:09:34,143: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:187657 exited with 'exitcode 15'
+[2021-05-12 10:09:34,143: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:164482 exited with 'exitcode 15'
+[2021-05-12 10:09:34,143: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:166758 exited with 'exitcode 15'
+[2021-05-12 10:09:34,143: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:166370 exited with 'exitcode 15'
+[2021-05-12 10:09:34,145: ERROR/MainProcess] Process 'ForkPoolWorker-4' pid:188467 exited with 'exitcode 15'
+[2021-05-12 10:09:34,148: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:190397 exited with 'exitcode 15'
+[2021-05-12 10:09:34,152: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:190975 exited with 'exitcode 15'
+[2021-05-12 10:09:34,152: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:168070 exited with 'exitcode 15'
+[2021-05-12 10:09:34,152: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:178576 exited with 'exitcode 15'
+[2021-05-12 10:09:34,152: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:177467 exited with 'exitcode 15'
+[2021-05-12 10:09:34,153: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:178703 exited with 'exitcode 15'
+[2021-05-12 10:09:34,153: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:187656 exited with 'exitcode 15'
+[2021-05-12 10:09:34,154: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:164481 exited with 'exitcode 15'
+[2021-05-12 10:09:34,154: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:166369 exited with 'exitcode 15'
+[2021-05-12 10:09:34,154: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:166757 exited with 'exitcode 15'
+[2021-05-12 10:09:34,155: ERROR/MainProcess] Process 'ForkPoolWorker-3' pid:188466 exited with 'exitcode 15'
+[2021-05-12 10:09:34,158: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:190395 exited with 'exitcode 15'
+[2021-05-12 10:09:34,163: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:168069 exited with 'exitcode 15'
+[2021-05-12 10:09:34,163: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:178575 exited with 'exitcode 15'
+[2021-05-12 10:09:34,163: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:177466 exited with 'exitcode 15'
+[2021-05-12 10:09:34,164: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:178702 exited with 'exitcode 15'
+[2021-05-12 10:09:34,164: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:187655 exited with 'exitcode 15'
+[2021-05-12 10:09:34,164: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:166368 exited with 'exitcode 15'
+[2021-05-12 10:09:34,164: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:164480 exited with 'exitcode 15'
+[2021-05-12 10:09:34,164: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:166756 exited with 'exitcode 15'
+[2021-05-12 10:09:34,166: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:188465 exited with 'exitcode 15'
+[2021-05-12 10:09:34,169: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:190394 exited with 'exitcode 15'
+[2021-05-12 10:09:34,174: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:178574 exited with 'exitcode 15'
+[2021-05-12 10:09:34,174: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:177465 exited with 'exitcode 15'
+[2021-05-12 10:09:34,175: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:166367 exited with 'exitcode 15'
+[2021-05-12 10:09:34,175: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:166755 exited with 'exitcode 15'
+[2021-05-12 10:09:34,175: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:164479 exited with 'exitcode 15'
+[2021-05-12 10:09:34,177: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:188464 exited with 'exitcode 15'
+[2021-05-12 10:09:34,181: ERROR/MainProcess] Task handler raised error: WorkerLostError('Worker exited prematurely: exitcode 15 Job: 2.')
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/billiard/pool.py", line 1265, in mark_as_worker_lost
+    raise WorkerLostError(
+billiard.exceptions.WorkerLostError: Worker exited prematurely: exitcode 15 Job: 2.
+[2021-05-12 10:09:35,031: INFO/MainProcess] Received task: generate_geo[d4153f4b-7f93-45bf-9892-205fd7183d42]  
+[2021-05-12 10:12:56,338: INFO/ForkPoolWorker-11] Task generate_geo[d4153f4b-7f93-45bf-9892-205fd7183d42] succeeded in 201.29454439901747s: True
+[2021-05-12 11:10:29,715: INFO/MainProcess] Received task: generate_geo[3a2d0d40-5125-4a7b-b751-f5bfd40814c8]  
+[2021-05-12 11:10:30,820: INFO/MainProcess] Received task: generate_geo[e2cd0790-3a4d-43a3-b7d0-73928934cb4d]  
+[2021-05-12 11:10:31,095: INFO/ForkPoolWorker-15] Task generate_geo[3a2d0d40-5125-4a7b-b751-f5bfd40814c8] succeeded in 1.377141560020391s: True
+[2021-05-12 11:10:31,604: INFO/ForkPoolWorker-16] Task generate_geo[e2cd0790-3a4d-43a3-b7d0-73928934cb4d] succeeded in 0.7822278199892025s: True
+[2021-05-12 11:18:34,744: INFO/MainProcess] Received task: generate_geo[b6ee2673-dc9b-4c46-9419-4ffb2e7521b3]  
+[2021-05-12 11:18:35,651: INFO/ForkPoolWorker-15] Task generate_geo[b6ee2673-dc9b-4c46-9419-4ffb2e7521b3] succeeded in 0.9049187920172699s: True
+[2021-05-12 11:20:36,822: INFO/MainProcess] Received task: generate_geo[7808fd00-ff04-4c90-ad9c-946dcf9af5e8]  
+[2021-05-12 11:20:37,706: INFO/MainProcess] Received task: generate_geo[b75154c7-4992-444f-ba21-b8e8a4963108]  
+[2021-05-12 11:20:37,711: INFO/ForkPoolWorker-15] Task generate_geo[b75154c7-4992-444f-ba21-b8e8a4963108] succeeded in 0.0020481449901126325s: True
+[2021-05-12 11:20:38,318: INFO/MainProcess] Received task: generate_geo[516c881b-62a0-48d0-8392-0ab0bfdb99a5]  
+[2021-05-12 11:20:38,320: INFO/ForkPoolWorker-15] Task generate_geo[516c881b-62a0-48d0-8392-0ab0bfdb99a5] succeeded in 0.000730453000869602s: True
+[2021-05-12 11:22:18,122: ERROR/ForkPoolWorker-15] Task generate_geo[7808fd00-ff04-4c90-ad9c-946dcf9af5e8] raised unexpected: ProgrammingError("(psycopg2.ProgrammingError) can't adapt type 'builtin_function_or_method'")
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/vita/Downloads/home2/dokka_test_vd/apps/services/tasks.py", line 44, in generate_geo
+  File "<string>", line 2, in commit
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3262, in flush
+    self._flush(objects)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3402, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3362, in _flush
+    flush_context.execute()
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 453, in execute
+    rec.execute(self)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 627, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 234, in save_obj
+    _emit_update_statements(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 998, in _emit_update_statements
+    c = connection._execute_20(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 320, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/vita/Downloads/home2/dokka_test_vd/ve/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) can't adapt type 'builtin_function_or_method'
+[SQL: UPDATE upload SET status=%(status)s, finished=%(finished)s WHERE upload.id = %(upload_id)s]
+[parameters: {'status': 'done', 'finished': <built-in method utcnow of type object at 0x92ab80>, 'upload_id': 8}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
